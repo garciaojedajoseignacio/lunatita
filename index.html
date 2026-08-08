@@ -3,12 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="lunatita: detalles bonitos para celebrar, regalar y volver a ti.">
+  <meta
+    name="description"
+    content="lunatita: detalles bonitos para celebrar, regalar y volver a ti."
+  >
+
   <title>lunatita | Pequeños detalles, grandes momentos</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet"
+  >
 
   <style>
     :root {
@@ -21,6 +29,7 @@
       --sage: #cbd8ca;
       --white: #fffdfb;
       --line: rgba(37, 33, 43, 0.12);
+      --success: #66866d;
       --shadow: 0 18px 60px rgba(74, 50, 65, 0.12);
     }
 
@@ -49,15 +58,19 @@
       font-family: inherit;
     }
 
+    button {
+      cursor: pointer;
+    }
+
     .container {
       width: min(1120px, calc(100% - 40px));
       margin: 0 auto;
     }
 
     .announcement {
+      padding: 11px 20px;
       background: var(--ink);
       color: #fff;
-      padding: 11px 20px;
       text-align: center;
       font-size: 12px;
       letter-spacing: 0.04em;
@@ -65,7 +78,7 @@
 
     header {
       position: absolute;
-      z-index: 2;
+      z-index: 10;
       width: 100%;
       padding: 22px 0;
     }
@@ -98,14 +111,14 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      min-height: 46px;
+      padding: 14px 22px;
       border: 0;
       border-radius: 999px;
-      padding: 14px 22px;
       background: var(--ink);
       color: #fff;
       font-size: 13px;
       font-weight: 700;
-      cursor: pointer;
       transition: 0.2s ease;
     }
 
@@ -122,6 +135,25 @@
     .button.light:hover {
       background: var(--ink);
       color: #fff;
+    }
+
+    .button.outline {
+      border: 1px solid var(--ink);
+      background: transparent;
+      color: var(--ink);
+    }
+
+    .button.outline:hover {
+      background: var(--ink);
+      color: #fff;
+    }
+
+    .button.whatsapp {
+      background: #5e9b69;
+    }
+
+    .button.whatsapp:hover {
+      background: #477d51;
     }
 
     .hero {
@@ -182,7 +214,7 @@
     }
 
     h1 {
-      max-width: 600px;
+      max-width: 620px;
       font-size: clamp(48px, 6vw, 78px);
     }
 
@@ -190,8 +222,12 @@
       font-size: clamp(36px, 4vw, 52px);
     }
 
+    h3 {
+      margin-top: 0;
+    }
+
     .hero p {
-      max-width: 500px;
+      max-width: 510px;
       margin: 22px 0 30px;
       color: #5d5360;
       font-size: 18px;
@@ -202,6 +238,22 @@
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
+    }
+
+    .hero-trust {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: 24px;
+      color: #625967;
+      font-size: 12px;
+    }
+
+    .hero-trust span::before {
+      content: "✓";
+      margin-right: 6px;
+      color: var(--success);
+      font-weight: 700;
     }
 
     .visual {
@@ -277,7 +329,7 @@
       position: absolute;
       padding: 14px 18px;
       border-radius: 14px;
-      background: rgba(255, 255, 255, 0.8);
+      background: rgba(255, 255, 255, 0.82);
       box-shadow: 0 12px 30px rgba(90, 65, 80, 0.12);
       backdrop-filter: blur(8px);
       font-size: 12px;
@@ -322,8 +374,8 @@
       text-align: center;
     }
 
-    .center p {
-      max-width: 590px;
+    .center > p {
+      max-width: 620px;
       margin: 0 auto;
       color: var(--muted);
       line-height: 1.7;
@@ -341,6 +393,7 @@
       border: 1px solid var(--line);
       border-radius: 22px;
       background: var(--white);
+      text-align: left;
     }
 
     .icon {
@@ -355,7 +408,7 @@
     }
 
     .benefit h3 {
-      margin: 0 0 10px;
+      margin-bottom: 10px;
       font-size: 17px;
     }
 
@@ -379,7 +432,7 @@
 
     .offer-image {
       position: relative;
-      min-height: 390px;
+      min-height: 440px;
       overflow: hidden;
       border-radius: 28px;
       background:
@@ -411,6 +464,23 @@
       line-height: 1.7;
     }
 
+    .product-name {
+      margin: 16px 0 8px;
+      font-family: "Playfair Display", serif;
+      font-size: 32px;
+    }
+
+    .price {
+      margin: 0 0 12px;
+      font-size: 26px;
+      font-weight: 700;
+    }
+
+    .price-note {
+      color: #5d665d;
+      font-size: 13px;
+    }
+
     .checklist {
       display: grid;
       gap: 13px;
@@ -424,6 +494,28 @@
       content: "✓";
       margin-right: 10px;
       color: var(--rose-dark);
+      font-weight: 700;
+    }
+
+    .offer-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .mini-trust {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
+      color: #5d665d;
+      font-size: 12px;
+    }
+
+    .mini-trust span::before {
+      content: "✓";
+      margin-right: 5px;
+      color: var(--success);
       font-weight: 700;
     }
 
@@ -448,6 +540,53 @@
       text-align: center;
     }
 
+    .faq {
+      background: var(--white);
+    }
+
+    .faq-list {
+      max-width: 800px;
+      margin: 45px auto 0;
+    }
+
+    details {
+      border-bottom: 1px solid var(--line);
+    }
+
+    summary {
+      position: relative;
+      padding: 22px 35px 22px 0;
+      cursor: pointer;
+      list-style: none;
+      font-weight: 700;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "+";
+      position: absolute;
+      top: 18px;
+      right: 4px;
+      color: var(--rose-dark);
+      font-size: 24px;
+      font-weight: 400;
+    }
+
+    details[open] summary::after {
+      content: "−";
+    }
+
+    details p {
+      max-width: 700px;
+      margin: 0;
+      padding: 0 35px 22px 0;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
     .newsletter {
       padding: 75px 0;
       background: var(--ink);
@@ -466,8 +605,10 @@
     }
 
     .newsletter p {
+      max-width: 560px;
       margin: 0;
       color: #c8c1c8;
+      line-height: 1.6;
     }
 
     form {
@@ -486,6 +627,17 @@
       font: inherit;
     }
 
+    .form-message {
+      display: none;
+      margin-top: 12px;
+      color: #cfe5d1;
+      font-size: 13px;
+    }
+
+    .form-message.show {
+      display: block;
+    }
+
     footer {
       padding: 25px 0;
       background: #1d1922;
@@ -496,6 +648,7 @@
     .footer-row {
       display: flex;
       justify-content: space-between;
+      gap: 20px;
     }
 
     @media (max-width: 760px) {
@@ -538,226 +691,5 @@
         width: 100%;
       }
 
-      section {
-        padding: 72px 0;
-      }
-    }
-  </style>
-</head>
-
-<body>
-  <div class="announcement">
-    Envío gratis en compras desde $750 · Recibe un detalle especial en tu primer pedido
-  </div>
-
-  <header>
-    <div class="container">
-      <nav>
-        <a class="logo" href="#inicio" aria-label="Ir al inicio">
-          lunatita
-        </a>
-
-        <div class="nav-links">
-          <a href="#esencia">Nuestra esencia</a>
-          <a href="#favorito">Favorito</a>
-          <a class="button" href="#comprar">Comprar ahora</a>
-        </div>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero" id="inicio">
-      <div class="container hero-grid">
-        <div>
-          <span class="eyebrow">Hecho para iluminarte</span>
-
-          <h1>Pequeños detalles, grandes momentos.</h1>
-
-          <p>
-            Objetos bonitos, presentes con intención y un poquito de magia
-            para hacer especial lo cotidiano.
-          </p>
-
-          <div class="hero-actions">
-            <a class="button" href="#comprar">
-              Descubre lunatita <span aria-hidden="true">→</span>
-            </a>
-
-            <a class="button light" href="#esencia">
-              Conoce la marca
-            </a>
-          </div>
-        </div>
-
-        <div class="visual">
-          <div
-            class="product-card"
-            aria-label="Ilustración decorativa de lunatita"
-          >
-            <div class="moon"></div>
-            <div class="stars">✦ ✦</div>
-            <div class="visual-label">hecho con amor</div>
-          </div>
-
-          <div class="floating one">✦ Selección especial</div>
-          <div class="floating two">♡ 4.9/5 por nuestras clientas</div>
-        </div>
-      </div>
-    </section>
-
-    <div class="trust">
-      <div class="container trust-row">
-        <span>La comunidad que elige regalar bonito</span>
-
-        <span class="stars-rating">
-          ★★★★★
-          <span style="color: var(--muted); letter-spacing: 0;">
-            Más de 500 reseñas
-          </span>
-        </span>
-
-        <span>Compra segura · Atención cercana</span>
-      </div>
-    </div>
-
-    <section id="esencia">
-      <div class="container center">
-        <span class="eyebrow">Por qué lunatita</span>
-
-        <h2>Lo bonito también puede sentirse.</h2>
-
-        <p>
-          Creemos en los regalos que cuentan historias y en las piezas que
-          encuentran un lugar especial en tu vida.
-        </p>
-
-        <div class="benefits">
-          <article class="benefit">
-            <div class="icon">✦</div>
-            <h3>Elegido con intención</h3>
-            <p>
-              Cada producto pasa por una selección cuidadosa para que regalar
-              sea sencillo y memorable.
-            </p>
-          </article>
-
-          <article class="benefit">
-            <div class="icon">♡</div>
-            <h3>Detalles que conectan</h3>
-            <p>
-              Diseños cálidos y atemporales para acompañar tus momentos más
-              importantes.
-            </p>
-          </article>
-
-          <article class="benefit">
-            <div class="icon">☼</div>
-            <h3>Una experiencia cercana</h3>
-            <p>
-              Te ayudamos a encontrar ese detalle que dice mucho, incluso sin
-              palabras.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="offer" id="favorito">
-      <div class="container offer-grid">
-        <div
-          class="offer-image"
-          role="img"
-          aria-label="Composición visual de productos lunatita"
-        ></div>
-
-        <div class="offer-copy">
-          <span class="eyebrow">El favorito de la temporada</span>
-
-          <h2>Un detalle para volver a ti.</h2>
-
-          <p>
-            Descubre nuestra selección más especial: piezas pensadas para
-            celebrar, agradecer o simplemente recordarte lo bonito que es
-            consentirte.
-          </p>
-
-          <ul class="checklist">
-            <li>Diseño especial de edición limitada.</li>
-            <li>Empaque listo para regalar.</li>
-            <li>Envío cuidado a todo el país.</li>
-          </ul>
-
-          <a class="button" href="#comprar">
-            Quiero el mío →
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="testimonial">
-      <div class="container">
-        <span
-          class="eyebrow"
-          style="display: block; text-align: center;"
-        >
-          Historias lunatita
-        </span>
-
-        <blockquote>
-          “Se nota el cariño desde que abres el paquete. Fue el regalo perfecto
-          y ahora quiero uno para mí.”
-        </blockquote>
-
-        <cite>— Mariana R. · Cliente verificada</cite>
-      </div>
-    </section>
-
-    <section class="newsletter" id="comprar">
-      <div class="container newsletter-grid">
-        <div>
-          <h2>Únete a nuestro pequeño universo.</h2>
-
-          <p>
-            Recibe novedades, ideas para regalar y un beneficio especial de
-            bienvenida.
-          </p>
-        </div>
-
-        <form id="newsletter-form">
-          <input
-            type="email"
-            placeholder="Tu mejor email"
-            aria-label="Tu mejor email"
-            required
-          >
-
-          <button class="button light" type="submit">
-            Quiero entrar
-          </button>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container footer-row">
-      <span>© 2026 lunatita. Hecho con intención.</span>
-      <span>Instagram · Contacto · Términos</span>
-    </div>
-  </footer>
-
-  <script>
-    const newsletterForm = document.getElementById("newsletter-form");
-
-    newsletterForm.addEventListener("submit", function (event) {
-      event.preventDefault();
-
-      const button = newsletterForm.querySelector("button");
-
-      button.textContent = "¡Listo!";
-      button.disabled = true;
-    });
-  </script>
-</body>
-</html>
+      .hero-trust,
+      .mini-trust
