@@ -399,11 +399,6 @@
       font-size: 13px;
     }
 
-    .stars-rating {
-      color: #d18a60;
-      letter-spacing: 3px;
-    }
-
     section {
       padding: 100px 0;
     }
@@ -577,27 +572,6 @@
       font-weight: 700;
     }
 
-    .testimonial {
-      background: #f0e7f1;
-    }
-
-    blockquote {
-      max-width: 760px;
-      margin: 36px auto 22px;
-      text-align: center;
-      font-family: "Playfair Display", serif;
-      font-size: clamp(25px, 3vw, 38px);
-      line-height: 1.25;
-    }
-
-    cite {
-      display: block;
-      color: var(--muted);
-      font-size: 13px;
-      font-style: normal;
-      text-align: center;
-    }
-
     .faq {
       background: var(--white);
     }
@@ -645,55 +619,63 @@
       line-height: 1.7;
     }
 
-    .newsletter {
+    .contact {
       padding: 75px 0;
       background: var(--ink);
       color: #fff;
     }
 
-    .newsletter-grid {
+    .contact-grid {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 35px;
     }
 
-    .newsletter h2 {
+    .contact h2 {
       margin: 0 0 10px;
     }
 
-    .newsletter p {
+    .contact p {
       max-width: 560px;
       margin: 0;
       color: #c8c1c8;
       line-height: 1.6;
     }
 
-    form {
+    .contact-actions {
       display: flex;
-      width: min(450px, 100%);
-      gap: 8px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
     }
 
-    input {
-      min-width: 0;
-      flex: 1;
-      padding: 15px 18px;
-      border: 0;
-      border-radius: 999px;
-      outline: 0;
-      font: inherit;
+    .contact-number {
+      color: #fff;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
     }
 
-    .form-message {
-      display: none;
-      margin-top: 12px;
-      color: #cfe5d1;
-      font-size: 13px;
+    .contact-number:hover,
+    .footer-link:hover {
+      color: var(--rose);
     }
 
-    .form-message.show {
-      display: block;
+    .footer-link {
+      color: #fff;
+      font-weight: 700;
+    }
+
+    .how {
+      background: #f0e7f1;
+    }
+
+    .card-price {
+      margin: 6px 0 0;
+      color: var(--rose-dark);
+      font-size: 17px;
+      font-weight: 700;
     }
 
     footer {
@@ -966,14 +948,10 @@
         align-items: flex-start;
       }
 
-      .newsletter-grid {
+      .contact-grid {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-      }
-
-      .newsletter form {
-        width: 100%;
       }
 
       .hero-trust,
@@ -995,7 +973,7 @@
 
 <body>
   <div class="announcement">
-    Envío gratis en compras desde $750 · Recibe un detalle especial en tu primer pedido
+    Entrega gratis dentro de Osorno, en sectores cercanos · Pedidos por WhatsApp
   </div>
 
   <header>
@@ -1030,7 +1008,7 @@
           </p>
 
           <p>
-            Piezas hechas a mano, listas para regalar y enviar a todo Chile.
+            Piezas hechas a mano. Entrega gratis dentro de Osorno, en sectores cercanos.
           </p>
 
           <div class="hero-actions">
@@ -1044,9 +1022,9 @@
           </div>
 
           <div class="hero-trust">
-            <span>Compra segura</span>
-            <span>Empaque listo para regalar</span>
-            <span>Atención personalizada</span>
+            <span>Hecho a mano</span>
+            <span>Entrega gratis en Osorno</span>
+            <span>Pedidos por WhatsApp</span>
           </div>
         </div>
 
@@ -1070,16 +1048,11 @@
 
     <div class="trust">
       <div class="container trust-row">
-        <span>La comunidad que elige regalar bonito</span>
+        <span>Amigurumis tejidos a crochet</span>
 
-        <span class="stars-rating">
-          ★★★★★
-          <span style="color: var(--muted); letter-spacing: 0;">
-            Atención cercana
-          </span>
-        </span>
+        <span>Pedidos por WhatsApp</span>
 
-        <span>Envíos a todo Chile</span>
+        <span>Entrega gratis dentro de Osorno, en sectores cercanos</span>
       </div>
     </div>
 
@@ -1097,10 +1070,10 @@
         <div class="benefits">
           <article class="benefit">
             <div class="icon">✦</div>
-            <h3>Elegido con intención</h3>
+            <h3>Hecho a mano</h3>
             <p>
-              Cada producto pasa por una selección cuidadosa para que regalar
-              sea sencillo y memorable.
+              Cada amigurumi está tejido a crochet, pieza por pieza, para que
+              regalar sea sencillo y memorable.
             </p>
           </article>
 
@@ -1117,8 +1090,8 @@
             <div class="icon">☼</div>
             <h3>Una experiencia cercana</h3>
             <p>
-              Te ayudamos a encontrar ese detalle que dice mucho, incluso sin
-              palabras.
+              Te ayudamos por WhatsApp a encontrar ese detalle que dice mucho,
+              incluso sin palabras.
             </p>
           </article>
         </div>
@@ -1135,6 +1108,7 @@
           <p>
             Cada amigurumi está tejido a crochet y hecho a mano. Toca una foto
             para verla en grande y consúltanos por la pieza que te guste.
+            Todas las piezas cuestan $15.000.
           </p>
         </div>
 
@@ -1145,7 +1119,7 @@
               type="button"
               data-lightbox
               data-src="img/pulpo-turquesa.jpg"
-              data-caption="Pulpito turquesa"
+              data-caption="Pulpito turquesa · $15.000"
               data-alt="Pulpito turquesa de hilo suave, sobre una base de madera con luces cálidas."
               aria-label="Ampliar foto: Pulpito turquesa"
             >
@@ -1161,11 +1135,14 @@
             </button>
 
             <div class="card-body">
-              <h3>Pulpito turquesa</h3>
+              <div>
+                <h3>Pulpito turquesa</h3>
+                <p class="card-price">$15.000</p>
+              </div>
 
               <a
                 class="button outline"
-                href="https://wa.me/569XXXXXXXX?text=Hola%20lunatita,%20quisiera%20consultar%20por%20Pulpito%20turquesa."
+                href="https://wa.me/56932744263?text=Hola%20lunatita,%20quisiera%20consultar%20por%20Pulpito%20turquesa%20%28%2415.000%29."
                 target="_blank"
                 rel="noopener"
               >
@@ -1179,7 +1156,7 @@
               type="button"
               data-lightbox
               data-src="img/gato-gris.jpg"
-              data-caption="Gatito gris y blanco"
+              data-caption="Gatito gris y blanco · $15.000"
               data-alt="Gatito gris y blanco tejido a crochet, con cola erguida y patitas blancas."
               aria-label="Ampliar foto: Gatito gris y blanco"
             >
@@ -1195,11 +1172,14 @@
             </button>
 
             <div class="card-body">
-              <h3>Gatito gris y blanco</h3>
+              <div>
+                <h3>Gatito gris y blanco</h3>
+                <p class="card-price">$15.000</p>
+              </div>
 
               <a
                 class="button outline"
-                href="https://wa.me/569XXXXXXXX?text=Hola%20lunatita,%20quisiera%20consultar%20por%20Gatito%20gris%20y%20blanco."
+                href="https://wa.me/56932744263?text=Hola%20lunatita,%20quisiera%20consultar%20por%20Gatito%20gris%20y%20blanco%20%28%2415.000%29."
                 target="_blank"
                 rel="noopener"
               >
@@ -1213,7 +1193,7 @@
               type="button"
               data-lightbox
               data-src="img/conejo-blanco.jpg"
-              data-caption="Conejito blanco"
+              data-caption="Conejito blanco · $15.000"
               data-alt="Conejito blanco de orejas largas tejido en hilo mullido."
               aria-label="Ampliar foto: Conejito blanco"
             >
@@ -1229,11 +1209,14 @@
             </button>
 
             <div class="card-body">
-              <h3>Conejito blanco</h3>
+              <div>
+                <h3>Conejito blanco</h3>
+                <p class="card-price">$15.000</p>
+              </div>
 
               <a
                 class="button outline"
-                href="https://wa.me/569XXXXXXXX?text=Hola%20lunatita,%20quisiera%20consultar%20por%20Conejito%20blanco."
+                href="https://wa.me/56932744263?text=Hola%20lunatita,%20quisiera%20consultar%20por%20Conejito%20blanco%20%28%2415.000%29."
                 target="_blank"
                 rel="noopener"
               >
@@ -1247,7 +1230,7 @@
               type="button"
               data-lightbox
               data-src="img/osito-peludo-beige.jpg"
-              data-caption="Osito peludo"
+              data-caption="Osito peludo · $15.000"
               data-alt="Osito peludo color beige con ojitos negros, sostenido en la mano."
               aria-label="Ampliar foto: Osito peludo"
             >
@@ -1263,11 +1246,14 @@
             </button>
 
             <div class="card-body">
-              <h3>Osito peludo</h3>
+              <div>
+                <h3>Osito peludo</h3>
+                <p class="card-price">$15.000</p>
+              </div>
 
               <a
                 class="button outline"
-                href="https://wa.me/569XXXXXXXX?text=Hola%20lunatita,%20quisiera%20consultar%20por%20Osito%20peludo."
+                href="https://wa.me/56932744263?text=Hola%20lunatita,%20quisiera%20consultar%20por%20Osito%20peludo%20%28%2415.000%29."
                 target="_blank"
                 rel="noopener"
               >
@@ -1281,7 +1267,7 @@
               type="button"
               data-lightbox
               data-src="img/osito-sueter-azul.jpg"
-              data-caption="Osito con suéter azul"
+              data-caption="Osito con suéter azul · $15.000"
               data-alt="Osito café con suéter azul y rayas blancas que sostiene una tacita tejida."
               aria-label="Ampliar foto: Osito con suéter azul"
             >
@@ -1297,11 +1283,14 @@
             </button>
 
             <div class="card-body">
-              <h3>Osito con suéter azul</h3>
+              <div>
+                <h3>Osito con suéter azul</h3>
+                <p class="card-price">$15.000</p>
+              </div>
 
               <a
                 class="button outline"
-                href="https://wa.me/569XXXXXXXX?text=Hola%20lunatita,%20quisiera%20consultar%20por%20Osito%20con%20su%C3%A9ter%20azul."
+                href="https://wa.me/56932744263?text=Hola%20lunatita,%20quisiera%20consultar%20por%20Osito%20con%20su%C3%A9ter%20azul%20%28%2415.000%29."
                 target="_blank"
                 rel="noopener"
               >
@@ -1315,7 +1304,7 @@
               type="button"
               data-lightbox
               data-src="img/cohete.jpg"
-              data-caption="Cohete"
+              data-caption="Cohete · $15.000"
               data-alt="Cohete tejido a crochet, blanco con ventana azul, alas rojas y llamas de hilo naranjo y amarillo."
               aria-label="Ampliar foto: Cohete"
             >
@@ -1331,11 +1320,14 @@
             </button>
 
             <div class="card-body">
-              <h3>Cohete</h3>
+              <div>
+                <h3>Cohete</h3>
+                <p class="card-price">$15.000</p>
+              </div>
 
               <a
                 class="button outline"
-                href="https://wa.me/569XXXXXXXX?text=Hola%20lunatita,%20quisiera%20consultar%20por%20Cohete."
+                href="https://wa.me/56932744263?text=Hola%20lunatita,%20quisiera%20consultar%20por%20Cohete%20%28%2415.000%29."
                 target="_blank"
                 rel="noopener"
               >
@@ -1349,7 +1341,7 @@
               type="button"
               data-lightbox
               data-src="img/pinguino.jpg"
-              data-caption="Pingüinito"
+              data-caption="Pingüinito · $15.000"
               data-alt="Pingüinito tejido a crochet con pecho gris, cara blanca y piquito naranjo."
               aria-label="Ampliar foto: Pingüinito"
             >
@@ -1365,11 +1357,14 @@
             </button>
 
             <div class="card-body">
-              <h3>Pingüinito</h3>
+              <div>
+                <h3>Pingüinito</h3>
+                <p class="card-price">$15.000</p>
+              </div>
 
               <a
                 class="button outline"
-                href="https://wa.me/569XXXXXXXX?text=Hola%20lunatita,%20quisiera%20consultar%20por%20Ping%C3%BCinito."
+                href="https://wa.me/56932744263?text=Hola%20lunatita,%20quisiera%20consultar%20por%20Ping%C3%BCinito%20%28%2415.000%29."
                 target="_blank"
                 rel="noopener"
               >
@@ -1383,7 +1378,7 @@
               type="button"
               data-lightbox
               data-src="img/ballena-rosada.jpg"
-              data-caption="Ballenita rosada"
+              data-caption="Ballenita rosada · $15.000"
               data-alt="Ballenita rosada con panza blanca tejida en hilo suave."
               aria-label="Ampliar foto: Ballenita rosada"
             >
@@ -1399,11 +1394,14 @@
             </button>
 
             <div class="card-body">
-              <h3>Ballenita rosada</h3>
+              <div>
+                <h3>Ballenita rosada</h3>
+                <p class="card-price">$15.000</p>
+              </div>
 
               <a
                 class="button outline"
-                href="https://wa.me/569XXXXXXXX?text=Hola%20lunatita,%20quisiera%20consultar%20por%20Ballenita%20rosada."
+                href="https://wa.me/56932744263?text=Hola%20lunatita,%20quisiera%20consultar%20por%20Ballenita%20rosada%20%28%2415.000%29."
                 target="_blank"
                 rel="noopener"
               >
@@ -1417,7 +1415,7 @@
               type="button"
               data-lightbox
               data-src="img/arana-cafe.jpg"
-              data-caption="Arañita café"
+              data-caption="Arañita café · $15.000"
               data-alt="Arañita café tejida a crochet con ojitos negros brillantes y colmillos claros."
               aria-label="Ampliar foto: Arañita café"
             >
@@ -1433,11 +1431,14 @@
             </button>
 
             <div class="card-body">
-              <h3>Arañita café</h3>
+              <div>
+                <h3>Arañita café</h3>
+                <p class="card-price">$15.000</p>
+              </div>
 
               <a
                 class="button outline"
-                href="https://wa.me/569XXXXXXXX?text=Hola%20lunatita,%20quisiera%20consultar%20por%20Ara%C3%B1ita%20caf%C3%A9."
+                href="https://wa.me/56932744263?text=Hola%20lunatita,%20quisiera%20consultar%20por%20Ara%C3%B1ita%20caf%C3%A9%20%28%2415.000%29."
                 target="_blank"
                 rel="noopener"
               >
@@ -1451,7 +1452,7 @@
               type="button"
               data-lightbox
               data-src="img/abeja.jpg"
-              data-caption="Abejita"
+              data-caption="Abejita · $15.000"
               data-alt="Abejita amarilla con rayas negras y alitas blancas, sostenida entre los dedos."
               aria-label="Ampliar foto: Abejita"
             >
@@ -1467,11 +1468,14 @@
             </button>
 
             <div class="card-body">
-              <h3>Abejita</h3>
+              <div>
+                <h3>Abejita</h3>
+                <p class="card-price">$15.000</p>
+              </div>
 
               <a
                 class="button outline"
-                href="https://wa.me/569XXXXXXXX?text=Hola%20lunatita,%20quisiera%20consultar%20por%20Abejita."
+                href="https://wa.me/56932744263?text=Hola%20lunatita,%20quisiera%20consultar%20por%20Abejita%20%28%2415.000%29."
                 target="_blank"
                 rel="noopener"
               >
@@ -1485,7 +1489,7 @@
               type="button"
               data-lightbox
               data-src="img/conejo-rosado.jpg"
-              data-caption="Conejito rosado"
+              data-caption="Conejito rosado · $15.000"
               data-alt="Conejito rosado de hilo suave con orejas largas y dientecito blanco."
               aria-label="Ampliar foto: Conejito rosado"
             >
@@ -1501,11 +1505,14 @@
             </button>
 
             <div class="card-body">
-              <h3>Conejito rosado</h3>
+              <div>
+                <h3>Conejito rosado</h3>
+                <p class="card-price">$15.000</p>
+              </div>
 
               <a
                 class="button outline"
-                href="https://wa.me/569XXXXXXXX?text=Hola%20lunatita,%20quisiera%20consultar%20por%20Conejito%20rosado."
+                href="https://wa.me/56932744263?text=Hola%20lunatita,%20quisiera%20consultar%20por%20Conejito%20rosado%20%28%2415.000%29."
                 target="_blank"
                 rel="noopener"
               >
@@ -1519,7 +1526,7 @@
               type="button"
               data-lightbox
               data-src="img/personaje-rosado-gorro.jpg"
-              data-caption="Personaje rosado con gorro"
+              data-caption="Personaje rosado con gorro · $15.000"
               data-alt="Personaje rosado tejido a crochet con gorro amarillo y azul con lunares."
               aria-label="Ampliar foto: Personaje rosado con gorro"
             >
@@ -1535,11 +1542,14 @@
             </button>
 
             <div class="card-body">
-              <h3>Personaje rosado con gorro</h3>
+              <div>
+                <h3>Personaje rosado con gorro</h3>
+                <p class="card-price">$15.000</p>
+              </div>
 
               <a
                 class="button outline"
-                href="https://wa.me/569XXXXXXXX?text=Hola%20lunatita,%20quisiera%20consultar%20por%20Personaje%20rosado%20con%20gorro."
+                href="https://wa.me/56932744263?text=Hola%20lunatita,%20quisiera%20consultar%20por%20Personaje%20rosado%20con%20gorro%20%28%2415.000%29."
                 target="_blank"
                 rel="noopener"
               >
@@ -1561,7 +1571,7 @@
               type="button"
               data-lightbox
               data-src="img/gato-blanco.jpg"
-              data-caption="Gatito blanco"
+              data-caption="Gatito blanco · $15.000"
               data-alt="Gatito blanco de hilo mullido con nariz rosada, sostenido en la mano."
               aria-label="Ampliar foto: Gatito blanco"
             >
@@ -1577,11 +1587,14 @@
             </button>
 
             <div class="card-body">
-              <h3>Gatito blanco</h3>
+              <div>
+                <h3>Gatito blanco</h3>
+                <p class="card-price">$15.000</p>
+              </div>
 
               <a
                 class="button outline"
-                href="https://wa.me/569XXXXXXXX?text=Hola%20lunatita,%20quisiera%20consultar%20por%20Gatito%20blanco."
+                href="https://wa.me/56932744263?text=Hola%20lunatita,%20quisiera%20consultar%20por%20Gatito%20blanco%20%28%2415.000%29."
                 target="_blank"
                 rel="noopener"
               >
@@ -1595,7 +1608,7 @@
               type="button"
               data-lightbox
               data-src="img/gato-gris-lana.jpg"
-              data-caption="Gatito gris de lana"
+              data-caption="Gatito gris de lana · $15.000"
               data-alt="Gatito gris y blanco tejido a crochet con cola levantada."
               aria-label="Ampliar foto: Gatito gris de lana"
             >
@@ -1611,11 +1624,14 @@
             </button>
 
             <div class="card-body">
-              <h3>Gatito gris de lana</h3>
+              <div>
+                <h3>Gatito gris de lana</h3>
+                <p class="card-price">$15.000</p>
+              </div>
 
               <a
                 class="button outline"
-                href="https://wa.me/569XXXXXXXX?text=Hola%20lunatita,%20quisiera%20consultar%20por%20Gatito%20gris%20de%20lana."
+                href="https://wa.me/56932744263?text=Hola%20lunatita,%20quisiera%20consultar%20por%20Gatito%20gris%20de%20lana%20%28%2415.000%29."
                 target="_blank"
                 rel="noopener"
               >
@@ -1629,7 +1645,7 @@
               type="button"
               data-lightbox
               data-src="img/pajarito-cafe.jpg"
-              data-caption="Pajarito café"
+              data-caption="Pajarito café · $15.000"
               data-alt="Pajarito café tejido a crochet con piquito amarillo y un detalle blanco sobre la cabeza."
               aria-label="Ampliar foto: Pajarito café"
             >
@@ -1645,11 +1661,14 @@
             </button>
 
             <div class="card-body">
-              <h3>Pajarito café</h3>
+              <div>
+                <h3>Pajarito café</h3>
+                <p class="card-price">$15.000</p>
+              </div>
 
               <a
                 class="button outline"
-                href="https://wa.me/569XXXXXXXX?text=Hola%20lunatita,%20quisiera%20consultar%20por%20Pajarito%20caf%C3%A9."
+                href="https://wa.me/56932744263?text=Hola%20lunatita,%20quisiera%20consultar%20por%20Pajarito%20caf%C3%A9%20%28%2415.000%29."
                 target="_blank"
                 rel="noopener"
               >
@@ -1663,7 +1682,7 @@
               type="button"
               data-lightbox
               data-src="img/trio-mini-amigurumis.jpg"
-              data-caption="Trío de mini amigurumis"
+              data-caption="Trío de mini amigurumis · $15.000"
               data-alt="Tres mini amigurumis: un ave blanca con cresta roja, un pulpo azul y una figura amarilla."
               aria-label="Ampliar foto: Trío de mini amigurumis"
             >
@@ -1679,11 +1698,14 @@
             </button>
 
             <div class="card-body">
-              <h3>Trío de mini amigurumis</h3>
+              <div>
+                <h3>Trío de mini amigurumis</h3>
+                <p class="card-price">$15.000</p>
+              </div>
 
               <a
                 class="button outline"
-                href="https://wa.me/569XXXXXXXX?text=Hola%20lunatita,%20quisiera%20consultar%20por%20Tr%C3%ADo%20de%20mini%20amigurumis."
+                href="https://wa.me/56932744263?text=Hola%20lunatita,%20quisiera%20consultar%20por%20Tr%C3%ADo%20de%20mini%20amigurumis%20%28%2415.000%29."
                 target="_blank"
                 rel="noopener"
               >
@@ -1697,7 +1719,7 @@
               type="button"
               data-lightbox
               data-src="img/mini-amigurumi-blanco.jpg"
-              data-caption="Mini amigurumi blanco"
+              data-caption="Mini amigurumi blanco · $15.000"
               data-alt="Mini amigurumi blanco de ojitos negros sostenido entre los dedos."
               aria-label="Ampliar foto: Mini amigurumi blanco"
             >
@@ -1713,11 +1735,14 @@
             </button>
 
             <div class="card-body">
-              <h3>Mini amigurumi blanco</h3>
+              <div>
+                <h3>Mini amigurumi blanco</h3>
+                <p class="card-price">$15.000</p>
+              </div>
 
               <a
                 class="button outline"
-                href="https://wa.me/569XXXXXXXX?text=Hola%20lunatita,%20quisiera%20consultar%20por%20Mini%20amigurumi%20blanco."
+                href="https://wa.me/56932744263?text=Hola%20lunatita,%20quisiera%20consultar%20por%20Mini%20amigurumi%20blanco%20%28%2415.000%29."
                 target="_blank"
                 rel="noopener"
               >
@@ -1731,7 +1756,7 @@
               type="button"
               data-lightbox
               data-src="img/gato-blanco-y-gato-atigrado.jpg"
-              data-caption="Gatito blanco y gatito atigrado"
+              data-caption="Gatito blanco y gatito atigrado · $15.000"
               data-alt="Gatito blanco de hilo mullido junto a un gatito atigrado café."
               aria-label="Ampliar foto: Gatito blanco y gatito atigrado"
             >
@@ -1747,11 +1772,14 @@
             </button>
 
             <div class="card-body">
-              <h3>Gatito blanco y gatito atigrado</h3>
+              <div>
+                <h3>Gatito blanco y gatito atigrado</h3>
+                <p class="card-price">$15.000</p>
+              </div>
 
               <a
                 class="button outline"
-                href="https://wa.me/569XXXXXXXX?text=Hola%20lunatita,%20quisiera%20consultar%20por%20Gatito%20blanco%20y%20gatito%20atigrado."
+                href="https://wa.me/56932744263?text=Hola%20lunatita,%20quisiera%20consultar%20por%20Gatito%20blanco%20y%20gatito%20atigrado%20%28%2415.000%29."
                 target="_blank"
                 rel="noopener"
               >
@@ -1765,7 +1793,7 @@
               type="button"
               data-lightbox
               data-src="img/personaje-rosado-gorro-2.jpg"
-              data-caption="Personaje rosado con gorro, otra vista"
+              data-caption="Personaje rosado con gorro, otra vista · $15.000"
               data-alt="Personaje rosado con gorro amarillo y azul, visto desde otro ángulo."
               aria-label="Ampliar foto: Personaje rosado con gorro, otra vista"
             >
@@ -1781,11 +1809,14 @@
             </button>
 
             <div class="card-body">
-              <h3>Personaje rosado con gorro, otra vista</h3>
+              <div>
+                <h3>Personaje rosado con gorro, otra vista</h3>
+                <p class="card-price">$15.000</p>
+              </div>
 
               <a
                 class="button outline"
-                href="https://wa.me/569XXXXXXXX?text=Hola%20lunatita,%20quisiera%20consultar%20por%20Personaje%20rosado%20con%20gorro,%20otra%20vista."
+                href="https://wa.me/56932744263?text=Hola%20lunatita,%20quisiera%20consultar%20por%20Personaje%20rosado%20con%20gorro,%20otra%20vista%20%28%2415.000%29."
                 target="_blank"
                 rel="noopener"
               >
@@ -1799,7 +1830,7 @@
               type="button"
               data-lightbox
               data-src="img/corazon-pompon.jpg"
-              data-caption="Corazón de pompón"
+              data-caption="Corazón de pompón · $15.000"
               data-alt="Corazón de pompón rojo hecho de hilo, sobre la palma de una mano."
               aria-label="Ampliar foto: Corazón de pompón"
             >
@@ -1815,11 +1846,14 @@
             </button>
 
             <div class="card-body">
-              <h3>Corazón de pompón</h3>
+              <div>
+                <h3>Corazón de pompón</h3>
+                <p class="card-price">$15.000</p>
+              </div>
 
               <a
                 class="button outline"
-                href="https://wa.me/569XXXXXXXX?text=Hola%20lunatita,%20quisiera%20consultar%20por%20Coraz%C3%B3n%20de%20pomp%C3%B3n."
+                href="https://wa.me/56932744263?text=Hola%20lunatita,%20quisiera%20consultar%20por%20Coraz%C3%B3n%20de%20pomp%C3%B3n%20%28%2415.000%29."
                 target="_blank"
                 rel="noopener"
               >
@@ -1845,20 +1879,20 @@
         </div>
 
         <div class="offer-copy">
-          <span class="eyebrow">El favorito de la temporada</span>
+          <span class="eyebrow">Pieza destacada</span>
 
           <h2>Un detalle para volver a ti.</h2>
 
           <div class="product-name">
-            Detalle especial lunatita
+            Gatito gris y blanco
           </div>
 
           <div class="price">
-            $24.990
+            $15.000
           </div>
 
           <div class="price-note">
-            Precio referencial · Reemplazar con el valor real del producto
+            Precio por pieza · CLP
           </div>
 
           <p>
@@ -1867,16 +1901,15 @@
           </p>
 
           <ul class="checklist">
-            <li>Diseño especial de edición limitada.</li>
-            <li>Empaque listo para regalar.</li>
-            <li>Opción de agregar una dedicatoria.</li>
-            <li>Despacho protegido a todo Chile.</li>
+            <li>Tejido a crochet, hecho a mano.</li>
+            <li>Entrega gratis dentro de Osorno, en sectores cercanos.</li>
+            <li>Pedido y coordinación de la entrega por WhatsApp.</li>
           </ul>
 
           <div class="offer-actions">
             <a
               class="button"
-              href="https://wa.me/569XXXXXXXX?text=Hola%20lunatita,%20quiero%20comprar%20el%20detalle%20especial."
+              href="https://wa.me/56932744263?text=Hola%20lunatita,%20quiero%20comprar%20el%20Gatito%20gris%20y%20blanco%20%28%2415.000%29."
               target="_blank"
               rel="noopener"
             >
@@ -1885,7 +1918,7 @@
 
             <a
               class="button whatsapp"
-              href="https://wa.me/569XXXXXXXX?text=Hola%20lunatita,%20quisiera%20consultar%20por%20el%20producto%20destacado."
+              href="https://wa.me/56932744263?text=Hola%20lunatita,%20quisiera%20consultar%20por%20el%20Gatito%20gris%20y%20blanco%20%28%2415.000%29."
               target="_blank"
               rel="noopener"
             >
@@ -1894,31 +1927,46 @@
           </div>
 
           <div class="mini-trust">
-            <span>Pago seguro</span>
-            <span>Despacho protegido</span>
-            <span>Atención personalizada</span>
+            <span>Hecho a mano</span>
+            <span>Entrega gratis en Osorno</span>
+            <span>Pedidos por WhatsApp</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="testimonial">
-      <div class="container">
-        <span
-          class="eyebrow"
-          style="display: block; text-align: center;"
-        >
-          Historias lunatita
-        </span>
+    <section class="how">
+      <div class="container center">
+        <span class="eyebrow">Tu pedido</span>
 
-        <blockquote>
-          “Se nota el cariño desde que abres el paquete. Fue el regalo perfecto
-          y ahora quiero uno para mí.”
-        </blockquote>
+        <h2>Simple, cercano y hecho a mano.</h2>
 
-        <cite>
-          — Mariana R. · Cliente verificada
-        </cite>
+        <div class="benefits">
+          <article class="benefit">
+            <div class="icon">✦</div>
+            <h3>Hecho a mano</h3>
+            <p>
+              Cada amigurumi está tejido a crochet con dedicación.
+            </p>
+          </article>
+
+          <article class="benefit">
+            <div class="icon">♡</div>
+            <h3>Entrega gratis en Osorno</h3>
+            <p>
+              Entrega gratis dentro de Osorno, en sectores cercanos.
+            </p>
+          </article>
+
+          <article class="benefit">
+            <div class="icon">☼</div>
+            <h3>Pedidos por WhatsApp</h3>
+            <p>
+              Escríbenos al +56 9 3274 4263 y coordinamos tu pedido y la
+              entrega.
+            </p>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -1928,88 +1976,82 @@
           <span class="eyebrow">Antes de comprar</span>
           <h2>Queremos que compres con tranquilidad.</h2>
           <p>
-            Resolvemos las preguntas más comunes para que tu experiencia con
-            lunatita sea simple y segura.
+            Resolvemos las preguntas más comunes para que tu pedido con
+            lunatita sea simple.
           </p>
         </div>
 
         <div class="faq-list">
           <details>
-            <summary>¿Realizan envíos a todo Chile?</summary>
+            <summary>¿Hacen entregas?</summary>
             <p>
-              Sí. Realizamos envíos a distintas regiones de Chile. El tiempo
-              y costo de despacho se informan antes de confirmar la compra.
+              Sí. La entrega es gratis dentro de Osorno, en sectores cercanos.
+              Si estás en otro lugar, escríbenos por WhatsApp y coordinamos la
+              entrega.
             </p>
           </details>
 
           <details>
-            <summary>¿El producto viene listo para regalar?</summary>
+            <summary>¿Cómo hago mi pedido?</summary>
             <p>
-              Sí. El producto se prepara con una presentación especial y puedes
-              consultar por la opción de agregar una dedicatoria personalizada.
+              Escríbenos por WhatsApp al +56 9 3274 4263, cuéntanos qué
+              amigurumi te gustó y coordinamos el pedido y la entrega.
             </p>
           </details>
 
           <details>
-            <summary>¿Cuánto demora el despacho?</summary>
+            <summary>¿Cuánto cuestan?</summary>
             <p>
-              El tiempo de preparación y despacho depende de la comuna y la
-              disponibilidad del producto. Escríbenos por WhatsApp para obtener
-              una estimación concreta.
+              Todas las piezas cuestan $15.000 (pesos chilenos).
+            </p>
+          </details>
+
+          <details>
+            <summary>¿Los amigurumis son hechos a mano?</summary>
+            <p>
+              Sí. Cada pieza está tejida a crochet y hecha a mano.
             </p>
           </details>
 
           <details>
             <summary>¿Qué medios de pago aceptan?</summary>
             <p>
-              Puedes consultar por los medios de pago disponibles directamente
-              con nuestro equipo de atención.
-            </p>
-          </details>
-
-          <details>
-            <summary>¿Qué ocurre si el producto llega dañado?</summary>
-            <p>
-              Contáctanos lo antes posible con fotografías del pedido. Nuestro
-              equipo revisará el caso y te indicará los siguientes pasos.
+              Consúltalo directamente por WhatsApp al +56 9 3274 4263.
             </p>
           </details>
         </div>
       </div>
     </section>
 
-    <section class="newsletter" id="comprar">
-      <div class="container newsletter-grid">
+    <section class="contact" id="comprar">
+      <div class="container contact-grid">
         <div>
-          <h2>Únete a nuestro pequeño universo.</h2>
+          <h2>Haz tu pedido por WhatsApp.</h2>
 
           <p>
-            Recibe novedades, ideas para regalar y acceso anticipado a
-            colecciones especiales.
+            Cuéntanos qué amigurumi te gustó y coordinamos tu pedido y la
+            entrega. Entrega gratis dentro de Osorno, en sectores cercanos.
           </p>
         </div>
 
-        <div>
-          <form id="newsletter-form">
-            <input
-              type="email"
-              placeholder="Tu mejor email"
-              aria-label="Tu mejor email"
-              required
-            >
-
-            <button class="button light" type="submit">
-              Quiero entrar
-            </button>
-          </form>
-
-          <div
-            class="form-message"
-            id="form-message"
-            role="status"
+        <div class="contact-actions">
+          <a
+            class="button whatsapp"
+            href="https://wa.me/56932744263?text=Hola%20lunatita,%20quisiera%20hacer%20un%20pedido."
+            target="_blank"
+            rel="noopener"
           >
-            ¡Listo! Revisa tu correo para confirmar la suscripción.
-          </div>
+            Escribir por WhatsApp
+          </a>
+
+          <a
+            class="contact-number"
+            href="https://wa.me/56932744263"
+            target="_blank"
+            rel="noopener"
+          >
+            +56 9 3274 4263
+          </a>
         </div>
       </div>
     </section>
@@ -2037,25 +2079,18 @@
       </span>
 
       <span>
-        Instagram · Contacto · Términos
+        Contacto:
+        <a
+          class="footer-link"
+          href="https://wa.me/56932744263"
+          target="_blank"
+          rel="noopener"
+        >WhatsApp +56 9 3274 4263</a>
       </span>
     </div>
   </footer>
 
   <script>
-    const newsletterForm = document.getElementById("newsletter-form");
-    const formMessage = document.getElementById("form-message");
-
-    newsletterForm.addEventListener("submit", function (event) {
-      event.preventDefault();
-
-      const button = newsletterForm.querySelector("button");
-
-      button.textContent = "¡Suscrito!";
-      button.disabled = true;
-      formMessage.classList.add("show");
-    });
-
     const lightbox = document.getElementById("lightbox");
     const lightboxImg = document.getElementById("lightbox-img");
     const lightboxCaption = document.getElementById("lightbox-caption");
